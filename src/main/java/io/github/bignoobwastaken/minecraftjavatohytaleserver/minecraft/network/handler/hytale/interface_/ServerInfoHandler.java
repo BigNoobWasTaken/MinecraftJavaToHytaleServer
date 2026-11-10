@@ -1,0 +1,23 @@
+package io.github.bignoobwastaken.minecraftjavatohytaleserver.minecraft.network.handler.hytale.interface_;
+
+import com.hypixel.hytale.protocol.Asset;
+import com.hypixel.hytale.protocol.packets.interface_.ServerInfo;
+import com.hypixel.hytale.protocol.packets.setup.RequestAssets;
+import com.hypixel.hytale.protocol.packets.setup.SetupFinalize;
+import com.hypixel.hytale.protocol.packets.setup.ViewRadius;
+import io.github.bignoobwastaken.minecraftjavatohytaleserver.minecraft.network.handler.PacketHandler;
+import io.github.bignoobwastaken.minecraftjavatohytaleserver.minecraft.network.player.MinecraftClientConnection;
+
+public class ServerInfoHandler implements PacketHandler<ServerInfo> {
+    @Override
+    public void handle(ServerInfo packet, MinecraftClientConnection connection) {
+        RequestAssets requestAssetsPacket = new RequestAssets(new Asset[0]);
+        connection.getHytaleChannel().sendPacket(requestAssetsPacket);
+
+        ViewRadius viewRadiusPacket = new ViewRadius(connection.getViewDistance()*16);
+        connection.getHytaleChannel().sendPacket(viewRadiusPacket);
+
+        SetupFinalize setupFinalizePacket = new SetupFinalize();
+        connection.getHytaleChannel().sendPacket(setupFinalizePacket);
+    }
+}

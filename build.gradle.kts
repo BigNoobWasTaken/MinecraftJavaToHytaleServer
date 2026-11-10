@@ -1,8 +1,9 @@
 plugins {
 // Uncomment if you are using IntelliJ.
-//  idea
+    idea
     java
     id("com.azuredoom.hytale-tools") version "1.+"
+    id("io.freefair.lombok") version "9.+"
 }
 
 
@@ -34,11 +35,33 @@ hytaleTools {
     patchline = property("patchline").toString()
     injectServerJavadocsIntoSources = property("injectServerJavadocsIntoSources").toString().toBoolean()
     generateAssetsBinary = property("generateAssetsBinary").toString().toBoolean()
-    // hytaleHomeOverride = property("hytaleHomeOverride").toString()
+    //hytaleHomeOverride = property("hytaleHomeOverride").toString()
 }
 
 repositories {
     mavenCentral()
+    maven {
+        name = "open collab Repository Maven Releases"
+        url = uri("https://repo.opencollab.dev/maven-releases")
+    }
+    maven {
+        name = "open collab Repository Maven Snapshots"
+        url = uri("https://repo.opencollab.dev/maven-snapshots")
+    }
+    maven {
+        name = "ViaVersion"
+        url = uri("https://repo.viaversion.com")
+    }
+}
+
+dependencies {
+    implementation("org.geysermc.mcprotocollib:protocol:1.21.11-1") {
+        exclude("io.netty", "*")
+    }
+    compileOnly("com.viaversion:viaversion-api:5.12.2")
+    implementation("com.viaversion:viaversion-common:5.12.2")
+    implementation("com.viaversion:viabackwards-common:5.12.2")
+    implementation("com.google.guava:guava:33.8.0-jre")
 }
 
 tasks.named<Jar>("jar") {
@@ -47,9 +70,9 @@ tasks.named<Jar>("jar") {
 }
 
 // Uncomment if you are using IntelliJ.
-// idea {
-//     module {
-//         isDownloadSources = true
-//         isDownloadJavadoc = true
-//     }
-// }
+ idea {
+     module {
+         isDownloadSources = true
+         isDownloadJavadoc = true
+     }
+ }

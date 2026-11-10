@@ -1,0 +1,16 @@
+package io.github.bignoobwastaken.minecraftjavatohytaleserver.hytaledev.api.chunk;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+
+@AllArgsConstructor
+@Getter
+@EqualsAndHashCode
+@ToString
+public class ChunkCoordIntPair {
+    private final int x;
+    private final int z;
+}
+

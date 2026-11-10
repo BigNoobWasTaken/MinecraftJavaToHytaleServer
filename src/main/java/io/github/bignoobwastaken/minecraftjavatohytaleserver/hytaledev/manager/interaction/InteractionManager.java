@@ -23,7 +23,7 @@ import io.github.bignoobwastaken.minecraftjavatohytaleserver.hytaledev.api.Clien
 import io.github.bignoobwastaken.minecraftjavatohytaleserver.hytaledev.manager.interaction.impl.*;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectList;
-import testhytalecrossplayproject.minecraftjavatohytale.hytaledev.manager.interaction.impl.*;
+import io.github.bignoobwastaken.minecraftjavatohytaleserver.hytaledev.manager.interaction.impl.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;

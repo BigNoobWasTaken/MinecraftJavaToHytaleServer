@@ -11,7 +11,6 @@ import org.geysermc.mcprotocollib.protocol.packet.ingame.serverbound.inventory.S
 import org.geysermc.mcprotocollib.protocol.packet.ingame.serverbound.level.ServerboundAcceptTeleportationPacket;
 import org.geysermc.mcprotocollib.protocol.packet.ingame.serverbound.level.ServerboundPlayerInputPacket;
 import org.geysermc.mcprotocollib.protocol.packet.ingame.serverbound.player.*;
-import testhytalecrossplayproject.minecraftjavatohytale.minecraft.network.handler.minecraft.play.*;
 
 public class MinecraftServerPacketHandlerRegistry extends HandlerRegistry<Packet> {
     {

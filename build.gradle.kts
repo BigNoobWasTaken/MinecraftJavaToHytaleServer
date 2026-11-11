@@ -58,7 +58,7 @@ dependencies {
     implementation("org.geysermc.mcprotocollib:protocol:1.21.11-1") {
         exclude("io.netty", "*")
     }
-    compileOnly("com.viaversion:viaversion-api:5.12.2")
+    implementation("com.viaversion:viaversion-api:5.12.2")
     implementation("com.viaversion:viaversion-common:5.12.2")
     implementation("com.viaversion:viabackwards-common:5.12.2")
     implementation("com.google.guava:guava:33.8.0-jre")

@@ -1,0 +1,17 @@
+$C = "../Common.ui"
+
+Group {
+    Anchor: (Top: 0, Bottom: 0, Left: 0, Right: 0);
+    LayoutMode: TopScrolling;
+
+    Group {
+        LayoutMode: Left,
+        Height: 200;
+
+        Button { Anchor: (Width:80, Height: 30); }
+        Group {
+            Anchor: (Top: 0, Bottom: 0, Left: 0, Right: 0);
+            LayoutMode: Left;
+        }
+    }
+}

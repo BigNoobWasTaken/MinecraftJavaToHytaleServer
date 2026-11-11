@@ -33,9 +33,9 @@ public class Entity {
     private byte headYaw;
 
     //private EntityMetadata metadata;
-    protected class MetadataList {
-        private Map<Integer, EntityMetadata<?, ?>> metadataMap = new HashMap<>();
-        private Set<Integer> dirtyIds = new HashSet<>();
+    protected static class MetadataList {
+        private final Map<Integer, EntityMetadata<?, ?>> metadataMap = new HashMap<>();
+        private final Set<Integer> dirtyIds = new HashSet<>();
 
         public void setMetadata(EntityMetadata<?, ?> metadata) {
             this.metadataMap.put(metadata.getId(), metadata);

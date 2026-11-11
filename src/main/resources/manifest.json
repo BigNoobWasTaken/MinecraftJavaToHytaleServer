@@ -1,7 +1,7 @@
 {
     "Group": "BigNoobWasTaken",
     "Name": "MinecraftJavaToHytaleServer",
-    "Version": "0.0.2",
+    "Version": "0.0.3",
     "Description": "Just a Hytale mod that can connect Minecraft Java client to Hytale server",
     "Authors": [
         {
@@ -19,9 +19,9 @@
     "OptionalDependencies": {
         
     },
-    "ServerVersion": ">=0.7.0 <0.7.9",
+    "ServerVersion": ">=0.7.0 <0.8.0",
     "Main": "io.github.bignoobwastaken.minecraftjavatohytaleserver.MinecraftServerCreationPlugin",
     "UpdateChecker": {
-        "CurseForge": ""
+        "CurseForge": "1796342"
     }
 }

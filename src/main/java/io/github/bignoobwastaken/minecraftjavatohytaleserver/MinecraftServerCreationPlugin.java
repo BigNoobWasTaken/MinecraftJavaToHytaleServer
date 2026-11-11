@@ -25,11 +25,11 @@ public class MinecraftServerCreationPlugin extends JavaPlugin {
 
     @Override
     protected void setup() {
-        try {
-            ServerIconUtil.INSTANCE.loadServerIcon(new File(ModdingConstant.PATH + "/Image","MinecraftIcon.png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            ServerIconUtil.INSTANCE.loadServerIcon(new File(ModdingConstant.PATH + "/Image","MinecraftIcon.png"));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
 
 //        PacketAdapters.registerInbound((PacketWatcher) (packetHandler, packet) -> {
 //            System.out.println("inbound packet track: " + packetHandler.getIdentifier() + ' ' + packet.getClass().getName());

@@ -99,8 +99,11 @@ For full plugin documentation, configuration options, tasks, and multi-project s
 # Check your JVM and hot swap setup
 ./gradlew hytaleJvmDoctor
 
-# Build the plugin
+# Build the plugin, including its runtime dependencies
 ./gradlew build
+
+# Build only the plugin JAR
+./gradlew shadowJar
 
 # Refresh dependencies if something fails to resolve
 ./gradlew build --refresh-dependencies
@@ -145,6 +148,8 @@ After changing these values, run:
   AzureDoom Maven repository at `https://maven.azuredoom.com/mods`.
 - **Build fails with missing dependencies** — Run `./gradlew build --refresh-dependencies` and make
   sure you have internet access.
+- **Runtime dependency classes are missing from the plugin JAR** — Use the artifact produced by
+  `shadowJar` (also built by `build`); the regular thin `jar` task is disabled.
 - **Permission denied on `./gradlew`** — Run `chmod +x gradlew` on macOS/Linux.
 - **Hot reload or enhanced class redefinition does not work** — Use JetBrains Runtime and try
   `./gradlew hytaleJvmDoctor` to verify your JVM setup.
